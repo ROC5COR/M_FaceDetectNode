@@ -74,8 +74,12 @@ class FaceDetect:
 
 
 class FaceDetectNode(threading.Thread):
-    def __init__(self, port, face_detect_model_folder):
+    def __init__(self, port):
         threading.Thread.__init__(self)
+
+        current_file_dirname = os.path.dirname(os.path.abspath(__file__))
+        face_detect_model_folder = os.path.join(current_file_dirname, "face_detection_model")
+
         self.face_detect = FaceDetect(face_detect_model_folder)
         self.port = port
 
