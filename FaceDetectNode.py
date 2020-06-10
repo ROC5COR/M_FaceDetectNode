@@ -79,7 +79,7 @@ class FaceDetectNode(threading.Thread):
 
         current_file_dirname = os.path.dirname(os.path.abspath(__file__))
         face_detect_model_folder = os.path.join(current_file_dirname, "face_detection_model")
-
+        print("[INFO:FaceDetectNode] Loading model from dir {}".format(face_detect_model_folder))
         self.face_detect = FaceDetect(face_detect_model_folder)
         self.port = port
 
