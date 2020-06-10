@@ -1,0 +1,5 @@
+{
+    "entryfile":"FaceDetectNode.py",
+    "entryclass":"FaceDetectNode",
+    "version":"0.2"
+}
